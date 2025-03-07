@@ -1,30 +1,41 @@
-/* Add a background image to the body when the class "image" is applied */
+/* Add a background image to the body */
 body.image {
     background-image: url('travel-hd-axhrsecphqby11wk.jpg'); 
-    background-size: cover; /* Ensure the image covers the full viewport */
-    /*background-position: center; /* Centers the background image */
-  /*  background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Style for navigation */
+/* Navigation bar */
 nav {
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
-h1{
-    display: inline;
+
+h1 {
+    margin-left: 20px;
+    font-size: 24px;
 }
-.item{
-    display: inline;
-    margin-left: 50%;
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-right: 20px;
 }
+
 nav .item a {
     color: white;
     text-decoration: none;
-    padding: 0 15px;
+    font-size: 16px;
+    padding: 5px 10px;
 }
 
 nav .item a:hover {
@@ -32,18 +43,17 @@ nav .item a:hover {
     color: aqua;
 }
 
-/* Style for search button and input */
+/* Search bar */
 .size {
     text-align: center;
     margin-top: 20px;
-   
 }
 
 .size input {
     padding: 10px;
-    margin: 20px;
     font-size: 15px;
-    width: 600px;
+    width: 60%;
+    max-width: 600px;
 }
 
 .size button {
@@ -51,6 +61,44 @@ nav .item a:hover {
     font-size: 15px;
     cursor: pointer;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .item {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .size input {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    nav .item a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .size input {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .size button {
+        font-size: 14px;
+    }
+}
+
 
 /* About styles */
 
